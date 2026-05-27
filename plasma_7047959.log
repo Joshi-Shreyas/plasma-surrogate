@@ -1,0 +1,50 @@
+/var/spool/slurmd/job7047959/slurm_script: line 10: activate: No such file or directory
+[generate] 2000 samples saved to etch_data.pt
+[generate] Etch rate range: 199.5 – 1288.3 A/min
+[train] Dataset: 1600 train / 400 val samples
+[train] Starting training …
+  Epoch    1 | Train Loss: 340624.5638 | Val Loss: 81803.8438 | Best: 81803.8438
+  Epoch  200 | Train Loss: 1641.6805 | Val Loss: 1450.8562 | Best: 1440.0470
+  Epoch  400 | Train Loss: 1157.7024 | Val Loss: 1023.7084 | Best: 1023.3977
+  Epoch  600 | Train Loss: 815.3345 | Val Loss: 711.5686 | Best: 711.5686
+  Epoch  800 | Train Loss: 914.3063 | Val Loss: 776.3267 | Best: 694.5759
+  Epoch 1000 | Train Loss: 774.8824 | Val Loss: 708.0389 | Best: 686.9989
+  Epoch 1200 | Train Loss: 781.2213 | Val Loss: 685.4840 | Best: 684.4056
+  Epoch 1400 | Train Loss: 794.4505 | Val Loss: 703.4442 | Best: 682.5028
+[train] Best val loss: 682.3510 → model saved to lam_plasma_model.pth
+[train] Loss curve saved → training_loss_curve.png
+
+=============================================
+  LAM RESEARCH PLASMA SURROGATE — PREDICTION
+=============================================
+  Position  : wafer center (0, 0)
+  Pressure  : 50 mTorr
+  RF Power  : 1200 W
+  Etch Rate : 702.55 Å/min
+=============================================
+
+
+Sample | Actual (Å/min) |  Predicted |  Error %
+------------------------------------------------
+     1 |         798.41 |     775.88 |    2.82%
+     2 |         456.47 |     450.68 |    1.27%
+     3 |         806.85 |     826.14 |    2.39%
+     4 |         472.35 |     448.07 |    5.14%
+     5 |         369.97 |     367.41 |    0.69%
+
+  MAE  : 14.89 Å/min
+  MAPE : 2.46%
+  Model Accuracy : 97.54%
+
+
+── Local Sensitivity Analysis ──────────────────
+  Baseline recipe : 55.0 mTorr | 1250.0 W | Center wafer
+  Base etch rate  : 740.16 Å/min
+  +10% Pressure   : +1.78% change in etch rate
+  +10% RF Power   : +8.66% change in etch rate
+  → Process is Power-Sensitive
+──────────────────────────────────────────────────
+
+[sensitivity] Sweep plots saved → sensitivity_sweep.png
+[plot] Wafer uniformity map saved → wafer_uniformity_map.png
+[plot] Non-uniformity (range/2mean): 10.67%

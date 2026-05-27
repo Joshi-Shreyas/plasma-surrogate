@@ -1,0 +1,17 @@
+# Model checkpoints and data (large binary files)
+*.pth
+*.pt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+
+# Generated outputs (optional: remove these lines to commit plots)
+*.png
+
+# OS
+.DS_Store
+Thumbs.db
