@@ -21,7 +21,7 @@ Output:  Etch rate [Å/min]
 
 | Metric | Value |
 |---|---|
-| Model Accuracy (MAPE-based) | ~94.98%% |
+| Model Accuracy (MAPE-based) | ~94.98% |
 | Inference time (CPU) | < 1 ms per point |
 | Wafer grid prediction (100×100) | < 50 ms |
 
